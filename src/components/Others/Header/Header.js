@@ -19,6 +19,10 @@ const Header = () => {
         <li class="nav-item">
         <Link className='nav-link text-white active fs-4' to="/">Home</Link>
         </li>
+        
+        <li class="nav-item">
+        <Link className='nav-link text-white fs-4' to="/register">Register</Link>
+        </li>
         <li class="nav-item">
             {
                 user?<button onClick={()=>signOut(auth)}  className='btn fs-4 btn-primary'>SignOut</button>:<Link className='nav-link text-white fs-4' to="/login">Login</Link>
@@ -26,14 +30,15 @@ const Header = () => {
             }
         
         </li>
+        
         <li class="nav-item">
-        <Link className='nav-link text-white fs-4' to="/register">Register</Link>
+        <Link className='nav-link text-white fs-4' to="/checkout">Checkout</Link>
         </li>
         <li class="nav-item">
         <Link className='nav-link text-white fs-4' to="/blog">Blog</Link>
         </li>
         <li class="nav-item">
-        <Link className='nav-link text-white fs-4' to="/checkout">Checkout</Link>
+        <Link className='nav-link text-white fs-4' to="/about">About</Link>
         </li>
       </ul>
     </div>
