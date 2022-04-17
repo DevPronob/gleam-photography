@@ -1,7 +1,8 @@
 import React from 'react';
 import "./ServiceItem.css"
+import { useNavigate } from 'react-router-dom';
 const ServiceItem = ({items}) => {
-    console.log(items)
+    let navigate = useNavigate();
     return (
         <div classNameName='col '>
             <div className="card h-100">
@@ -10,6 +11,7 @@ const ServiceItem = ({items}) => {
         <h5 className="card-title fs-2">{items.name}</h5>
         <p className="card-text fs-5">{items.Description}</p>
         <h4>Price: {items.price}</h4>
+        <button onClick={()=>navigate("/checkout")} className='btn btn-primary'>Checkout</button>
       </div>
     </div>
         </div>
