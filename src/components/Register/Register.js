@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import {Link, useNavigate} from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../src/Auth/firebase.init'
+import { useSendEmailVerification } from 'react-firebase-hooks/auth';
 
 const Register = () => {
     const [
@@ -11,7 +12,9 @@ const Register = () => {
         error,
       ] = useCreateUserWithEmailAndPassword(auth);
       let navigate = useNavigate();
-
+      const [sendEmailVerification, sending, verificationError] = useSendEmailVerification(
+        auth
+      );
     const emailRef =useRef("")
     const passwordRef =useRef("")
     const confirmPassRef =useRef("")
@@ -22,6 +25,7 @@ const Register = () => {
         const confirmPassword =confirmPassRef.current.value;
         console.log(email,password,confirmPassword)
         createUserWithEmailAndPassword(email, password)
+        sendEmailVerification()
         
     }
     if(user){
@@ -62,17 +66,9 @@ const Register = () => {
 
           <button type="submit" className="btn btn-primary btn-lg btn-block"> Sign Up</button>
 
-          <div className="divider d-flex align-items-center my-4">
-            <p className="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
-          </div>
 
-          <a className="btn btn-primary btn-lg btn-block"  href="#!"
-            role="button">
-            <i className="fab fa-facebook-f me-2"></i>Continue with Facebook
-          </a>
-          <a className="btn btn-primary btn-lg btn-block"  href="#!"
-            role="button">
-            <i className="fab fa-twitter me-2"></i>Continue with Twitter</a>
+
+         
 
         </form>
       </div>
