@@ -2,18 +2,22 @@ import React, { useRef } from 'react';
 import {Link, useNavigate,useLocation} from 'react-router-dom';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../src/Auth/firebase.init';
+import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 const Login = () => {
+
     const [
         signInWithEmailAndPassword,
         user,
         loading,
         error,
       ] = useSignInWithEmailAndPassword(auth);
-      let navigate = useNavigate();
+      
+    let navigate = useNavigate();
     const emailRef =useRef("")
     const passwordRef =useRef("")
     const location =useLocation();
     let from = location.state?.from?.pathname || "/";
+    const [signInWithGoogle, userGoogle, loadingGoogle, errorGoogle] = useSignInWithGoogle(auth);
     
     const handleSubmit =(event)=>{
         event.preventDefault()
@@ -59,13 +63,9 @@ const Login = () => {
             <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
           </div>
 
-          <a class="btn btn-primary btn-lg btn-block"  href="#!"
+          <button onClick={()=>signInWithGoogle()} class="btn btn-primary btn-lg btn-block"  
             role="button">
-            <i class="fab fa-facebook-f me-2"></i>Continue with Facebook
-          </a>
-          <a class="btn btn-primary btn-lg btn-block"  href="#!"
-            role="button">
-            <i class="fab fa-twitter me-2"></i>Continue with Twitter</a>
+          </button>
 
         </form>
       </div>
