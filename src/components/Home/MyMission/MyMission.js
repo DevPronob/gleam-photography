@@ -1,8 +1,10 @@
 import React from 'react';
 import img2 from "../../../images/slider-2.jpg"
+import Footer from '../../Others/Footer/Footer';
 const MyMission = () => {
     return (
-        <div className='container'>
+        <div className="">
+            <div className='container'>
             <h2 className='py-5'>My Mission</h2>
             <div className="row">
                <div className="col-md-6 ">
@@ -13,7 +15,14 @@ const MyMission = () => {
                i am always committed and motivted effecient and dedicated people with the right attitude who offer consistent profrssional image qualit and excellent customer service. </p>
                 </div>
             </div>
+            
         </div>
+        {
+            <Footer></Footer>
+        }
+        </div>
+        
+        
     );
 };
 
