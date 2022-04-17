@@ -32,7 +32,8 @@ const Login = () => {
 
     return (
         <div>
-            <div class=" d-flex justify-content-center mt-5 ">
+            <div class="w-25 mx-auto mt-5 ">
+                <h2>Please Login</h2>
         <form onSubmit={handleSubmit}>
 
           <div class="form-outline mb-4">
@@ -63,11 +64,13 @@ const Login = () => {
             <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
           </div>
 
-          <button onClick={()=>signInWithGoogle()} class="btn btn-primary btn-lg btn-block"  
-            role="button">
+          <button onClick={()=>signInWithGoogle()} class="btn btn-primary btn-lg btn-block" 
+            >
+            <i class="fab fa-facebook-f me-2"></i>Continue with Google
           </button>
 
         </form>
+
       </div>
         </div>
     );

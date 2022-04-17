@@ -30,48 +30,49 @@ const Register = () => {
     
     return (
         <div>
-             <div class=" d-flex justify-content-center mt-5 ">
+             <div className=" d-flex justify-content-center mt-5 ">
+            
         <form onSubmit={handleSubmit}>
-
-          <div class="form-outline mb-4">
-          <label class="form-label" for="form1Example13">Email address</label>
-            <input ref={emailRef} type="email" id="form1Example13" class="form-control form-control-lg" />
+        <h1>Please Register</h1>
+          <div className="form-outline mb-4">
+          <label className="form-label" for="form1Example13">Email address</label>
+            <input ref={emailRef} type="email" id="form1Example13" className="form-control form-control-lg" />
             
           </div>
 
 
-          <div class="form-outline mb-4">
-          <label class="form-label" for="form1Example23">Password</label>
-            <input ref={passwordRef} type="password" id="form1Example23" class="form-control form-control-lg" />
+          <div className="form-outline mb-4">
+          <label className="form-label" for="form1Example23">Password</label>
+            <input ref={passwordRef} type="password" id="form1Example23" className="form-control form-control-lg" />
             
           </div>
-          <div class="form-outline mb-4">
-          <label class="form-label" for="form1Example23">Confirm Password</label>
-            <input ref={confirmPassRef} type="password" id="form1Example23" class="form-control form-control-lg" />
+          <div className="form-outline mb-4">
+          <label className="form-label" for="form1Example23">Confirm Password</label>
+            <input ref={confirmPassRef} type="password" id="form1Example23" className="form-control form-control-lg" />
             
           </div>
 
-          <div class="d-flex justify-content-around align-items-center mb-4">
+          <div className="d-flex justify-content-around align-items-center mb-4">
 
 
-            <div class="form-check">
-             <h5>Already Register <Link className='text-decoration-none' to="/login">Login</Link></h5>
+            <div className="form-check">
+             <h5>Already Register <Link classNameName='text-decoration-none' to="/login">Login</Link></h5>
           </div>
           </div>
 
-          <button type="submit" class="btn btn-primary btn-lg btn-block">Sign Up</button>
+          <button type="submit" className="btn btn-primary btn-lg btn-block"> Sign Up</button>
 
-          <div class="divider d-flex align-items-center my-4">
-            <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+          <div className="divider d-flex align-items-center my-4">
+            <p className="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
           </div>
 
-          <a class="btn btn-primary btn-lg btn-block"  href="#!"
+          <a className="btn btn-primary btn-lg btn-block"  href="#!"
             role="button">
-            <i class="fab fa-facebook-f me-2"></i>Continue with Facebook
+            <i className="fab fa-facebook-f me-2"></i>Continue with Facebook
           </a>
-          <a class="btn btn-primary btn-lg btn-block"  href="#!"
+          <a className="btn btn-primary btn-lg btn-block"  href="#!"
             role="button">
-            <i class="fab fa-twitter me-2"></i>Continue with Twitter</a>
+            <i className="fab fa-twitter me-2"></i>Continue with Twitter</a>
 
         </form>
       </div>
