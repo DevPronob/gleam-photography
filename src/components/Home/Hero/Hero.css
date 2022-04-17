@@ -1,0 +1,19 @@
+.banner-image{
+    background: linear-gradient(rgba(29, 38, 113, 0.1), rgba(195, 55, 100, 0.1)), url("../../../images/slider-1.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.hero-title {
+    padding-top: 250px;
+    color: white;
+    font-size:50px;
+    font-weight: 700;
+}
+.banner-image p{
+    padding-bottom: 170px;
+    padding-left: 93px;
+    padding-right: 92px;
+    font-size: 27px;
+    font-weight: 500;
+}
