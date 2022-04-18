@@ -69,7 +69,7 @@ const Register = () => {
 
 
             <div className="form-check">
-             <h5>Already Register <Link classNameName='text-decoration-none' to="/login">Login</Link></h5>
+             <h5>Already Register <Link className='text-decoration-none' to="/login">Login</Link></h5>
           </div>
           </div>
 

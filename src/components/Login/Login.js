@@ -56,42 +56,42 @@ const Login = () => {
 
     return (
         <div>
-            <div class="w-25 mx-auto mt-5 ">
+            <div className="w-25 mx-auto mt-5 ">
                 <h2>Please Login</h2>
         <form onSubmit={handleSubmit}>
 
-          <div class="form-outline mb-4">
-          <label class="form-label" for="form1Example13">Email address</label>
-            <input ref={emailRef} type="email" id="form1Example13" class="form-control form-control-lg" required/>
+          <div className="form-outline mb-4">
+          <label className="form-label" for="form1Example13">Email address</label>
+            <input ref={emailRef} type="email" id="form1Example13" className="form-control form-control-lg" required/>
             
           </div>
 
 
-          <div class="form-outline mb-4">
-          <label class="form-label" for="form1Example23">Password</label>
-            <input ref={passwordRef} type="password" id="form1Example23" class="form-control form-control-lg" required />
+          <div className="form-outline mb-4">
+          <label className="form-label" for="form1Example23">Password</label>
+            <input ref={passwordRef} type="password" id="form1Example23" className="form-control form-control-lg" required />
             
           </div>
 
-          <div class="d-flex justify-content-around align-items-center mb-4">
+          <div className="d-flex justify-content-around align-items-center mb-4">
 
 
-          <div class="form-check">
+          <div className="form-check">
              <h5>New to here <Link className='text-decoration-none' to="/register">Register</Link></h5>
           </div>
 
           </div>
 
-          <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
+          <button type="submit" className="btn btn-primary btn-lg btn-block">Sign in</button>
             <p className='text-danger'>{loginError}</p>
-          <div class="divider d-flex align-items-center my-4">
+          <div className="divider d-flex align-items-center my-4">
               <h5>Forget Password <button onClick={handleReset} className='border-none'>Reset Password</button> </h5>
-            <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+            <p className="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
           </div>
 
-          <button onClick={()=>signInWithGoogle()} class="btn btn-primary btn-lg btn-block" 
+          <button onClick={()=>signInWithGoogle()} className="btn btn-primary btn-lg btn-block" 
             >
-            <i class="fab fa-facebook-f me-2"></i>Continue with Google
+            <i className="fab fa-facebook-f me-2"></i>Continue with Google
           </button>
 
         </form>

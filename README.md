@@ -1,5 +1,19 @@
 # Gleam Photography
-- 
+### Features
+- Login and signup Authentication
+- Private Authentication implement incheckout page 
+- Google Authentication
+- Created 404 page
+- Email verification implement
+- Reset password functionality implement
+
+### Tecnology
+- React router 
+- Bootstarp
+- Firebase
+- React router hook
+- react-toastify
+
 <!-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

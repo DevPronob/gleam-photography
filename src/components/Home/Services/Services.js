@@ -27,13 +27,12 @@ const Services = () => {
 
         }
     ]
-    console.log(AllServices)
     return (
-        <div>
+        <div className=''>
             <h2 className='py-5 fs-1 fw-bold'>My Services</h2>
             <div className="row row-cols-1 row-cols-md-3 g-4 container mx-auto">
                 {
-                    AllServices.map(items=><ServiceItem items ={items}></ServiceItem>)
+                    AllServices.map(items=><ServiceItem key={items.id} items ={items}></ServiceItem>)
                 }
             </div>
         </div>

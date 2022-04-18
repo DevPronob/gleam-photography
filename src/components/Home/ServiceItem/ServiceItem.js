@@ -4,7 +4,7 @@ import { useNavigate } from 'react-router-dom';
 const ServiceItem = ({items}) => {
     let navigate = useNavigate();
     return (
-        <div classNameName='col '>
+        <div className='col '>
             <div className="card h-100">
       <img src={items.img} className="card-img-top service-img" alt="..."/>
       <div className="card-body">
