@@ -73,7 +73,7 @@ const Register = () => {
           </div>
           </div>
 
-          <button type="submit" className="btn btn-primary btn-lg btn-block"> Sign Up</button>
+          <button  type="submit" className="btn btn-primary btn-lg btn-block"> Sign Up</button>
           <p className='text-danger fs-3'>{registerError}</p>
 
 
