@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef ,useState } from 'react';
 import {Link, useNavigate,useLocation} from 'react-router-dom';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import auth from '../../../src/Auth/firebase.init';
@@ -18,12 +18,19 @@ const Login = () => {
     const location =useLocation();
     let from = location.state?.from?.pathname || "/";
     const [signInWithGoogle, userGoogle, loadingGoogle, errorGoogle] = useSignInWithGoogle(auth);
-    
+    const [loginError,setLoginErrror] =useState("")
     const handleSubmit =(event)=>{
         event.preventDefault()
         const email =emailRef.current.value;
         const password =passwordRef.current.value;
-        console.log(email,password)
+        // if(email||password === null){
+        //     setLoginErrror("Please enter ypur email and password correctly")
+        //     return
+        // }
+          if(error){
+            setLoginErrror(error.message)
+            return
+        }
         signInWithEmailAndPassword(email, password)
     }
     if(user){
@@ -59,8 +66,9 @@ const Login = () => {
           </div>
 
           <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
-
+            <p className='text-danger'>{loginError}</p>
           <div class="divider d-flex align-items-center my-4">
+
             <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
           </div>
 
@@ -72,6 +80,7 @@ const Login = () => {
         </form>
 
       </div>
+      
         </div>
     );
 };
