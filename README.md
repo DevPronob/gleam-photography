@@ -1,5 +1,5 @@
-# Getting Started with Create React App
-- Item 1
+# Gleam Photography
+- 
 <!-- This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

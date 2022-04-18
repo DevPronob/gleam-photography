@@ -35,7 +35,7 @@ const Footer = () => {
 
   <div class="text-center fs-4 p-3 footer-bg">
     © 2020 Copyright 
-    <a class="text-white ps-2 " href="/">Gleam</a>
+    <a class="text-white ps-2 " href="/">Gleam Photography</a>
   </div>
 
 </footer>
