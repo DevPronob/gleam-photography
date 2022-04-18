@@ -11,6 +11,7 @@ const Register = () => {
         loading,
         error,
       ] = useCreateUserWithEmailAndPassword(auth);
+      
       let navigate = useNavigate();
       const [sendEmailVerification, sending, verificationError] = useSendEmailVerification(
         auth
@@ -34,6 +35,7 @@ const Register = () => {
         
     }
     if(user){
+        console.log(user)
         navigate("/")
     }
     
@@ -45,7 +47,7 @@ const Register = () => {
         <h1>Please Register</h1>
 
         <div className="form-outline mb-4">
-          <label className="form-label" for="form1Example23">Confirm Password</label>
+          <label className="form-label" for="form1Example23">Name</label>
             <input ref={nameRef} type="text" id="form1Example23" className="form-control form-control-lg" />
             
           </div>

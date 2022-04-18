@@ -1,8 +1,12 @@
 import React, { useRef ,useState } from 'react';
 import {Link, useNavigate,useLocation} from 'react-router-dom';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail } from 'react-firebase-hooks/auth';
 import auth from '../../../src/Auth/firebase.init';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Login = () => {
 
     const [
@@ -19,6 +23,9 @@ const Login = () => {
     let from = location.state?.from?.pathname || "/";
     const [signInWithGoogle, userGoogle, loadingGoogle, errorGoogle] = useSignInWithGoogle(auth);
     const [loginError,setLoginErrror] =useState("")
+    const [sendPasswordResetEmail, sending3, error3] = useSendPasswordResetEmail(
+        auth
+      );
     const handleSubmit =(event)=>{
         event.preventDefault()
         const email =emailRef.current.value;
@@ -35,6 +42,16 @@ const Login = () => {
     }
     if(user){
         navigate("/")
+    }
+    const handleReset =async()=>{
+        const email =emailRef.current.value;
+        if(email){
+            await sendPasswordResetEmail(email);
+       toast("Mail Sent");
+        }else{
+            toast("Please Enter Your Email ");
+        }
+        
     }
 
     return (
@@ -68,7 +85,7 @@ const Login = () => {
           <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
             <p className='text-danger'>{loginError}</p>
           <div class="divider d-flex align-items-center my-4">
-
+              <h5>Forget Password <button onClick={handleReset} className='border-none'>Reset Password</button> </h5>
             <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
           </div>
 
@@ -80,6 +97,7 @@ const Login = () => {
         </form>
 
       </div>
+      <ToastContainer />
       
         </div>
     );
