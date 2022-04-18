@@ -85,8 +85,8 @@ const Login = () => {
           <button type="submit" className="btn btn-primary btn-lg btn-block">Sign in</button>
             <p className='text-danger'>{loginError}</p>
           <div className="divider d-flex align-items-center my-4">
-              <h6>Forget Password <button onClick={handleReset} className='border-none'>Reset Password</button> </h6>
-            <p className="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
+              <h6>Forget Password <button onClick={handleReset} className='btn btn-link'>Reset Password</button> </h6>
+            <p className="text-left  mx-3 mb-0 text-muted">OR</p>
           </div>
 
           <button onClick={()=>signInWithGoogle()} className="btn btn-primary btn-lg btn-block" 
