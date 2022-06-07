@@ -3,7 +3,7 @@
 ### Live Site [https://genuine-hamster-f4a954.netlify.app/](https://genuine-hamster-f4a954.netlify.app/)
 
 ### Features
-- Login and signup Authentication
+- Login And Register Implement
 - Private Authentication implement incheckout page 
 - Google Authentication
 - Created 404 page
